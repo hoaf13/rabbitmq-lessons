@@ -15,9 +15,9 @@ while True:
     channel.basic_publish(
         exchange='',
         routing_key='task_queue',
-        body=str(product),
-        properties=pika.BasicProperties(
-            delivery_mode=2,  # make message persistent
+        body=str(product),  
+        properties=pika.BasicProperties(    
+            delivery_mode=2,  # make sure messages not lost when rabbitmq restarts
         ))
 
     print(" [x] Sent {}".format(product))
