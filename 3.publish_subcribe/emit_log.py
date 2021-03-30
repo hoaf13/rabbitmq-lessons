@@ -14,5 +14,4 @@ while True:
 	product += 1
 	time.sleep(0.5)
 
-	
 connection.close()

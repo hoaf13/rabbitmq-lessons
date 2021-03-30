@@ -16,6 +16,6 @@ def callback(ch, method, properties, body):
     ch.basic_ack(delivery_tag=method.delivery_tag)
 
 
-channel.basic_qos(prefetch_count=1) #no more than 1 message in each consumer
+channel.basic_qos(prefetch_count=1) #no more than 1 message in each consumerng
 channel.basic_consume(queue='task_queue', on_message_callback=callback)
 channel.start_consuming()
