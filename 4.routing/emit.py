@@ -1,5 +1,4 @@
 # emit station
-    
 import pika
 import sys
 import time 
